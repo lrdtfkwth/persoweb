@@ -1,0 +1,46 @@
+---
+title: 'Lorem ipsum'
+publishedAt: '2021-07-19'
+summary: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'
+---
+**Lorem ipsum** dolor sit amet, consectetur adipiscing elit. Duis aliquam sapien nec libero semper molestie. Praesent porta in risus et suscipit. Sed sagittis tristique arcu. Duis auctor imperdiet risus, rhoncus viverra sapien dapibus a. Aenean cursus ipsum imperdiet euismod commodo. Nam sodales neque lacus, eu finibus lorem vestibulum commodo. Suspendisse ac malesuada mi. Sed varius dictum sapien quis pretium. Pellentesque eros eros, feugiat et sodales ac, varius nec sapien. Morbi congue commodo mi, sed iaculis ante mattis et. Cras nec congue diam. Integer egestas tortor odio, a laoreet urna dictum sed. Pellentesque justo odio, interdum et elementum sit amet, vehicula sit amet diam. Fusce feugiat volutpat velit non tincidunt. Nam eget mi malesuada eros commodo interdum non vel nibh. Mauris at felis et lectus rutrum gravida non nec nibh.
+
+Duis non malesuada nunc. Fusce in metus consectetur, ultrices mauris non, accumsan nunc. Nulla facilisi. Duis dignissim ornare tellus, eget dapibus elit. Etiam sollicitudin diam orci, sed sagittis mi condimentum et. Mauris leo lectus, iaculis malesuada rhoncus ut, lacinia vel felis. Pellentesque dapibus felis nisi, sed lacinia mauris auctor nec. Mauris sit amet ante ex. Morbi id fermentum lectus. Sed commodo aliquam odio, non rutrum erat pellentesque imperdiet. Pellentesque pellentesque maximus odio, non semper quam imperdiet pharetra. Vivamus dignissim nulla non imperdiet venenatis. Etiam pharetra, turpis tincidunt molestie finibus, eros justo efficitur neque, id cursus risus nisl ut eros. Duis eu augue eu elit aliquam molestie ornare sit amet ligula. Vivamus congue, quam a finibus posuere, leo enim dignissim eros, non placerat felis risus sed est.
+
+Nam semper ante mauris, ac auctor nulla ultricies quis. Mauris a orci ut nisl tincidunt gravida. Donec finibus ultrices porta. Aliquam iaculis justo lacus, ac consequat quam fermentum eget. Proin congue tempor turpis eu luctus. Mauris pellentesque pretium elit, nec bibendum elit viverra dictum. Phasellus congue quam sit amet velit faucibus porta. Phasellus tincidunt gravida lacus, non bibendum leo lacinia at. Donec gravida cursus orci, ut ultrices ipsum tincidunt sit amet. Sed in turpis dignissim, auctor risus quis, fringilla sem. Cras ex felis, mattis ut faucibus vel, dapibus vel ex. Donec quis enim aliquam, pellentesque lectus id, condimentum augue.
+
+Phasellus vehicula blandit ipsum. Vestibulum laoreet ex imperdiet ex volutpat consequat. Nunc fringilla turpis in rutrum dapibus. Nam vestibulum mauris nec magna commodo imperdiet. Aliquam tempus tincidunt facilisis. Duis ullamcorper mi et scelerisque cursus. Sed dignissim, lectus et sodales luctus, orci nisl maximus ligula, in accumsan risus quam ac lectus. Nam ut mi mollis, auctor mi at, lacinia augue. Mauris tellus tellus, malesuada vehicula eleifend at, hendrerit et sem. Fusce ultrices diam eget volutpat sodales. Curabitur pretium commodo finibus. Duis fringilla lectus vel ligula ornare tincidunt. Aenean magna dolor, gravida ac ex eget, finibus suscipit mi. Sed ac diam nibh. Nunc porta ultricies bibendum. Mauris cursus convallis nisi, in sodales tortor bibendum vel.
+
+Donec rutrum quis arcu at ornare. Suspendisse faucibus efficitur sapien, ut mollis augue fringilla vitae. Aliquam erat volutpat. Morbi interdum, urna nec gravida semper, nibh dui tincidunt orci, ut malesuada quam odio vitae risus. Vivamus et sollicitudin tellus, ut sodales arcu. Maecenas ultrices libero a risus ultrices, a dapibus ipsum congue. Maecenas tristique ornare augue, non iaculis eros porta et. Fusce fringilla congue lectus, a fermentum tortor efficitur non. Donec ullamcorper vel magna non convallis. Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+```c
+void insert(BinaryTree* tree, int data) {
+    Node* newNode = (Node*)malloc(sizeof(Node));
+    newNode->data = data;
+    newNode->left = NULL;
+    newNode->right = NULL;
+    if (tree->root == NULL) {
+        tree->root = newNode;
+    }
+    else {
+        Node* current = tree->root;
+        while (current != NULL) {
+            if (data < current->data) {
+                if (current->left == NULL) {
+                    current->left = newNode;
+                    break;
+                }
+                current = current->left;
+            }
+            else {
+                if (current->right == NULL) {
+                    current->right = newNode;
+                    break;
+                }
+                current = current->right;
+            }
+        }
+    }
+    tree->size++;
+}
+```
