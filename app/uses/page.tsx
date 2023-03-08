@@ -17,20 +17,18 @@ export default function UsesPage() {
         <h3 id="computer-office">Computer / Office</h3>
         <ul>
           <li>kajib standard scientific calculator Mh-991Esplus</li>
-          <li>linux</li>
           <li>my bed</li>
           <li>big pillow</li>
         </ul>
         <h3 id="coding-hacking">Coding / Hacking</h3>
         <ul>
-          <li>big terminal</li>
+          <li>spoon</li>
         </ul>
         <h3 id="other-tech">Other Tech</h3>
         <ul>
           <li>pen</li>
           <li>pencil</li>
           <li>paper</li>
-          <li>candle</li>
         </ul>
       </div>
     </section>
